@@ -1,6 +1,7 @@
-// body {
-//   font-family: Arial, sans-serif;
-//   background-color: rgb(24, 230, 68);
-//   margin: 0;
-//   padding: 0;
-// }
+// Bases
+@import './styles/variables';
+@import './styles/reset';
+@import './styles/mixins';
+
+// Sections
+@import '../sections/featured-products.scss';
