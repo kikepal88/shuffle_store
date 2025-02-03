@@ -1,0 +1,7 @@
+<div class="paymethods_methods">
+  {% for link in settings['header'].settings.pay_methods.links %}
+    <div class="paymethods_methods_icon">
+      <img src="{{ link.url }}" alt="{{ link.label }}">
+    </div>
+  {% endfor %}
+</div>
