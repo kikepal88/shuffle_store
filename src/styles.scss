@@ -4,4 +4,8 @@
 @import './styles/mixins';
 
 // Sections
-@import '../sections/featured-products.scss';
+@import '../sections/featured-products/featured-products';
+@import '../sections/top-bar/top-bar';
+
+//Snippets
+@import '../snippets/marquee-item/marquee-item';

@@ -18,6 +18,7 @@ app.engine('liquid', engine.express());
 app.set('views', path.resolve(__dirname, 'templates'));
 app.set('view engine', 'liquid');
 
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use(express.static('public'));
 
 const products = require('./data/products.json');

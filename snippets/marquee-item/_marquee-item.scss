@@ -1,0 +1,25 @@
+article {
+  @include flex-center-center-nowrap;
+  width: 310px;
+  .marquee_image {
+    width: 20px;
+    margin-inline-end: 10px;
+  }
+  p {
+    width: 280px;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  article {
+    width: 332px;
+    .marquee_image {
+      width: 22px;
+    }
+    p {
+      width: 302px;
+      font-weight: bold;
+    }
+  }
+}
