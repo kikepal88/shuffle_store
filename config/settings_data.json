@@ -1,5 +1,13 @@
 {
   "sections": {
+    "top-bar": {
+      "type": "top-bar",
+      "settings": {
+        "heading": "FREE SHIPPING FOR ORDERS OVER $100",
+        "background_color": "#762bfb",
+        "image": "suffle_star.png"
+      }
+    },
     "featured-products": {
       "type": "featured-products",
       "settings": {

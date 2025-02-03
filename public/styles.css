@@ -1,0 +1,201 @@
+/*!**********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss ***!
+  \**********************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap);
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss (1) ***!
+  \**************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap);
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/styles.scss (2) ***!
+  \**************************************************************************************************************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 50%;
+}
+
+body {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  background-color: #181818;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Smooch Sans", serif;
+}
+
+h1 {
+  font-size: 2.811rem;
+  line-height: 3.514rem;
+}
+
+h2 {
+  font-size: 2.402rem;
+  line-height: 3.003rem;
+}
+
+h3 {
+  font-size: 2.053rem;
+  line-height: 2.567rem;
+}
+
+h4 {
+  font-size: 1.755rem;
+  line-height: 2.194rem;
+}
+
+p {
+  font-size: 1.5rem;
+  line-height: 1.95rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: #762bfb;
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 3.318rem;
+    line-height: 4.147rem;
+  }
+  h2 {
+    font-size: 2.765rem;
+    line-height: 3.456rem;
+  }
+  h3 {
+    font-size: 2.304rem;
+    line-height: 2.88rem;
+  }
+  h4 {
+    font-size: 1.92rem;
+    line-height: 2.4rem;
+  }
+  p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
+.featured-products {
+  background-color: grey;
+}
+
+.top_bar {
+  position: relative;
+  width: 100%;
+  padding: 5px 0;
+  color: #ffffff;
+  background: #762bfb;
+  overflow: hidden;
+}
+.top_bar__gradient_left, .top_bar__gradient_right {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 25px;
+  height: 36px;
+}
+.top_bar__gradient_left {
+  left: 0;
+  background: linear-gradient(90deg, #762bfb 20%, rgba(255, 255, 255, 0) 100%);
+}
+.top_bar__gradient_right {
+  right: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #762bfb 80%);
+}
+.top_bar__marquee {
+  display: flex;
+  gap: 10px;
+  min-width: 100%;
+  animation: marquee 60s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-800%);
+  }
+}
+@media screen and (min-width: 720px) {
+  .top_bar__marquee {
+    animation: marquee 65s linear infinite;
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-600%);
+    }
+  }
+}
+@media screen and (min-width: 1024px) {
+  .top_bar {
+    padding: 8px 0;
+  }
+  .top_bar__marquee {
+    animation: marquee 70s linear infinite;
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-400%);
+    }
+  }
+}
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 310px;
+}
+article .marquee_image {
+  width: 20px;
+  margin-inline-end: 10px;
+}
+article p {
+  width: 280px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1024px) {
+  article {
+    width: 332px;
+  }
+  article .marquee_image {
+    width: 22px;
+  }
+  article p {
+    width: 302px;
+    font-weight: bold;
+  }
+}

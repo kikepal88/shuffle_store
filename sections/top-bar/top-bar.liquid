@@ -1,0 +1,9 @@
+<section class="top_bar">
+  <div class="top_bar__gradient_left"></div>
+  <div class="top_bar__gradient_right"></div>
+  <div class="top_bar__marquee">
+  {% for i in (1..30) %}
+    {% render 'marquee-item/marquee-item', settings: settings %}
+  {% endfor %}
+  </div>
+</section>
