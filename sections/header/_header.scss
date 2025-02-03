@@ -1,0 +1,208 @@
+.header {
+  position: sticky;
+  @include flex-space-center-nowrap;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 5px;
+  background: rgba(229, 224, 230, 0.066);
+  backdrop-filter: blur(15px);
+  &_logo {
+    @include flex-start-center-nowrap;
+    &__menu_icon {
+      display: block;
+      width: 40px;
+      height: 40px;
+      color: $Color-secundario;
+      background-image: url("/assets/menu.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      &.icon_close {
+        background-image: url("/assets/close.svg");
+      }
+    }
+    &__suffle {
+      @include flex-start-center-nowrap;
+      width: 110px;
+      &_image {
+        width: 40px;
+      }
+      h1 {
+        font-weight: 800;
+        strong {
+          display: none;
+          font-weight: 700;
+        }
+        span {
+          color: $Color-secundario;
+        }
+      }
+    }
+  }
+  &_menu {
+    position: absolute;
+    top: 65px;
+    left: -100vw;
+    z-index: 1;
+    width: 100vw;
+    height: min-content;
+    padding: 20px 10px 10px;
+    color: $Color-claro;
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  $Color-secundario 0.1%, $Color-variante 99.8% );
+    background-size: 300% 300%;
+    animation: AnimateBG 15s ease infinite;
+    text-align: center;
+    opacity: 0.95;
+    transition: 0.3s;
+    &.is-active {
+      left: 0;
+    }
+    &__paymethods {
+      @include flex-center-center-nowrap;
+      width: 300px;
+      margin: 0 auto;
+      padding: 8px 10px;
+      border: 1px solid $Color-primario;
+      border-radius: 24px;
+      background-color: $Color-primario;
+      p {
+        margin-inline-end: 10px
+      }
+    }
+    nav {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      li {
+        width: 70%;
+        margin: 10px auto;
+        color: $Color-claro;
+        list-style: none;
+        cursor: pointer;
+        a {
+          color: $Color-claro;
+          text-decoration: none;
+        }
+        a:hover {
+          color: $Color-primario;
+        }
+        a:active {
+          color: $Color-primario;
+        }
+        a:focus {
+          color: $Color-primario;
+        }
+      }
+    }
+  }
+  &_car {
+    width: 45px;
+    height: 45px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: $Color-secundario;
+  }
+}
+
+@keyframes AnimateBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .header {
+    &_menu {
+      width: 50vw;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    &_logo {
+      @include flex-start-center-nowrap;
+      &__menu_icon {
+        display: none;
+      }
+      &__suffle {
+        width: 205px;
+        &_image {
+          width: 50px;
+        }
+        h1 {
+          strong {
+            display: inline;
+          }
+        }
+      }
+    }
+    &_menu {
+      position: initial;
+      top: initial;
+      left: initial;
+      z-index: initial;
+      height: initial;
+      padding: 0;
+      background-image: none;
+      background-size: initial;
+      animation: none;
+      opacity: 1;
+      &__paymethods {
+        position: absolute;
+        top: calc(50% - 26px);
+        left: calc(50% - 165px);
+        width: 310px;
+        margin: 0;
+        padding: 10px 15px;
+        border: 1px solid $Color-secundario;
+        border-radius: 26px;
+        p {
+          width: 80px;
+          margin-inline-end: 10px
+        }
+      }
+      nav {
+        position: absolute;
+        top: calc(50% - 17px);
+        right: 70px;
+        width: auto;
+        height: auto;
+        padding: 0;
+        ul {
+          @include flex-space-center-nowrap;
+        }
+        li {
+          width: 110px;
+          margin: 0;
+          margin-inline-end: 10px;
+          a:hover {
+            color: $Color-secundario;
+          }
+          a:active {
+            color: $Color-secundario;
+          }
+          a:focus {
+            color: $Color-secundario;
+          }
+        }
+      }
+    }
+    &_car {
+      width: 55px;
+      height: 45px;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+  }
+}

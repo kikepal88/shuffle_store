@@ -8,6 +8,28 @@
         "image": "suffle_star.png"
       }
     },
+    "header": {
+      "type": "header",
+      "settings": {
+        "heading": "SUFFLE",
+        "title": "STORE",
+        "image": "suffle_logo.png",
+        "links": [
+          { "label": "All Products", "url": "#allproducts" },
+          { "label": "Collections", "url": "#collections" }
+        ],
+        "pay_methods": {
+          "title": "We Accept",
+          "links": [
+            { "label": "bitcoin", "url": "/assets/bitcoin.svg" },
+            { "label": "ethereum", "url": "/assets/ethereum.png" },
+            { "label": "litecoin", "url": "/assets/litecoin.svg" },
+            { "label": "dogecoin", "url": "/assets/dogecoin.svg" },
+            { "label": "usdcoin", "url": "/assets/usdcoin.png" }
+          ]
+        }
+      }
+    },
     "featured-products": {
       "type": "featured-products",
       "settings": {

@@ -1,0 +1,51 @@
+<header class="header">
+  <div class="header_logo">
+    <i
+      id="header_icon__menu"
+      class="header_logo__menu_icon"
+      onClick="showMobileMenu()"
+    ></i>
+    <div class="header_logo__suffle">
+      <div class="header_logo__suffle_image">
+        <img src="/assets/shuffle_logo.png" alt="shuffle logo">
+      </div>
+      <h1>
+        <strong>{{ settings['header'].settings.heading }}</strong>
+        <span>|</span>
+        {{ settings['header'].settings.title }}
+      </h1>
+    </div>
+  </div>
+  <div id="header_menu" class="header_menu">
+    <div class="header_menu__paymethods">
+      <p>{{ settings['header'].settings.pay_methods.title }}</p>
+      {% comment %} <div class="header_menu__paymethods_methods">
+        {% for link in settings['header'].settings.pay_methods.links %}
+          <div class="header_menu__paymethods_methods_icon">
+            <img src="{{ link.url }}" alt="{{ link.label }}">
+          </div>
+        {% endfor %}
+      </div> {% endcomment %}
+      {%  render 'pay-icons/pay-icons', settings: settings %}
+    </div>
+    <nav>
+      <ul>
+        {% for link in settings['header'].settings.links %}
+          <li>
+            <a href="{{ link.url }}"><h2>{{ link.label }}</h2></a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+  <div class="header_car">
+    <img src="/assets/shopping_car.svg" alt="shopping car">
+  </div>
+</header>
+
+<script>
+  function showMobileMenu () {
+    document.getElementById('header_icon__menu').classList.toggle('icon_close');
+    document.getElementById('header_menu').classList.toggle('is-active');
+  }
+</script>

@@ -1,0 +1,29 @@
+
+.paymethods_methods {
+  @include flex-space-center-nowrap;
+  width: 190px;
+  &_icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+
+
+
+// @media screen and (min-width: 1024px) {
+//   .paymethods {
+//     position: absolute;
+//     top: calc(50% - 26px);
+//     left: calc(50% - 165px);
+//     width: 310px;
+//     margin: 0;
+//     padding: 10px 15px;
+//     border: 1px solid $Color-secundario;
+//     border-radius: 26px;
+//     p {
+//       width: 80px;
+//       margin-inline-end: 10px
+//     }
+//   }
+// }
