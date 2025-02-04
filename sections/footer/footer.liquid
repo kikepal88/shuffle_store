@@ -1,0 +1,62 @@
+<footer class="footer">
+  <div class="footer_logo">
+    <div class="footer_logo__suffle">
+      <div class="footer_logo__suffle_image">
+        <img src="/assets/shuffle_logo.png" alt="shuffle logo">
+      </div>
+      <h1>
+        <span>|</span>
+        {{ settings['footer'].settings.heading }}
+      </h1>
+    </div>
+  </div>
+  <div class="footer_copy">
+    <p>{{ settings['footer'].settings.copy }}</p>
+  </div>
+  <div class="footer_nav">
+    <nav>
+      <ul>
+        {% for link in settings['footer'].settings.links %}
+          <li>
+            <a href="{{ link.url }}"><h2>{{ link.label | upcase }}</h2></a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+  <div class="footer_subnav">
+    <nav>
+      <ul>
+        {% for link in settings['footer'].settings.second_links %}
+          <li>
+            <a href="{{ link.url }}"><h4>{{ link.label }}</h4></a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+  <div class="footer_pay">
+    <div class="footer_paymethods">
+      <p>{{ settings['footer'].settings.pay_methods_text }}</p>
+      {%  render 'pay-icons/pay-icons', settings: settings %}
+    </div>
+  </div>
+  <div class="footer_subscribe">
+    <p>{{ settings['footer'].settings.subscribe_text }}</p>
+    <input type="text" placeholder="Enter Email">
+    <div class="footer_subscribe__icon">
+      <img src="/assets/arrow_forward.svg" alt="arrow forward">
+    </div>
+  </div>
+  <div class="footer_social">
+    <nav>
+      <ul>
+        {% for link in settings['footer'].settings.social_links %}
+          <li>
+            <a href="{{ link.url }}"><h3>{{ link.label }}</h3></a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</footer>
