@@ -13,5 +13,45 @@
         "label": "Background Color"
       }
     ]
+  },
+  {
+    "name": "Footer Settings",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "STORE"
+      },
+      {
+        "type": "textarea",
+        "id": "copy",
+        "label": "Footer Copy"
+      },
+      {
+        "type": "text",
+        "id": "pay_methods_text",
+        "label": "Payment Methods Text"
+      },
+      {
+        "type": "text",
+        "id": "subscribe_text",
+        "label": "Subscribe Text"
+      },
+      {
+        "type": "url_list",
+        "id": "links",
+        "label": "Footer Links"
+      },
+      {
+        "type": "url_list",
+        "id": "second_links",
+        "label": "Secondary Footer Links"
+      },
+      {
+        "type": "url_list",
+        "id": "social_links",
+        "label": "Social Links"
+      }
+    ]
   }
 ]

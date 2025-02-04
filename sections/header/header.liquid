@@ -19,13 +19,6 @@
   <div id="header_menu" class="header_menu">
     <div class="header_menu__paymethods">
       <p>{{ settings['header'].settings.pay_methods.title }}</p>
-      {% comment %} <div class="header_menu__paymethods_methods">
-        {% for link in settings['header'].settings.pay_methods.links %}
-          <div class="header_menu__paymethods_methods_icon">
-            <img src="{{ link.url }}" alt="{{ link.label }}">
-          </div>
-        {% endfor %}
-      </div> {% endcomment %}
       {%  render 'pay-icons/pay-icons', settings: settings %}
     </div>
     <nav>
