@@ -1,0 +1,142 @@
+.hero {
+  width: 100%;
+  &_image {
+    width: 90%;
+    margin: 20px auto;
+    border-radius: 10px;
+    img {
+      aspect-ratio: 10 / 15;
+      border-radius: 10px;
+    }
+  }
+  .hero_marquee {
+    position: relative;
+    width: 100%;
+    padding: 5px 0;
+    color: $Color-claro;
+    background: $Color-primario;
+    overflow: hidden;
+    &__gradient_left, &__gradient_right {
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      width: 40px;
+      height: 50px;
+    }
+    &__gradient_left {
+      left: 0;
+      background: linear-gradient(90deg, $Color-primario 20%, #ffffff00 100%);
+    }
+    &__gradient_right {
+      right: 0;
+      background: linear-gradient(90deg, #ffffff00 0%, $Color-primario 80%);
+    }
+    &__marquee {
+      display: flex;
+      gap: 10px;
+      min-width: 100%;
+      animation: marquee 60s linear infinite;
+      article {
+        width: 345px;
+        .marquee_image {
+          width: 40px;
+          margin-inline-end: 15px;
+        }
+        p {
+          width: 290px;
+          font-size: $h1-size-p;
+          line-height: $h1-lh-size-p;
+        }
+      }
+    }
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-800%);
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .hero {
+    position: relative;
+    width: 100%;
+    &_image {
+      img {
+        aspect-ratio: 1920 / 847;
+        border-radius: 10px;
+      }
+    }
+    button {
+      position: absolute;
+      left: 55px;
+      bottom: 90px;
+    }
+    .hero_marquee {
+      &__marquee {
+        animation: marquee 70s linear infinite;
+      }
+    }
+  }
+  
+  @keyframes marquee {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-600%);
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    button {
+      left: 70px;
+      bottom: 100px;
+    }
+    .hero_marquee {
+      padding: 8px 0;
+      &__gradient_left, &__gradient_right {
+        width: 52px;
+        height: 66px;
+      }
+      &__marquee {
+        article {
+          width: 410px;
+          .marquee_image {
+            width: 50px;
+          }
+          p {
+            width: 345px;
+            font-size: $h1-size-g;
+            line-height: $h1-lh-size-g;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    max-width: 1300px;
+    margin: 30px auto;
+    &_image {
+      width: 100%;
+      margin: 0 0 20px 0;
+    }
+    button {
+      left: 40px;
+      bottom: 110px;
+    }
+    .hero_marquee {
+      left: calc((1300px - 100vw) + ((100vw - 1300px)/2));
+      width: 100vw;
+    }
+  }
+}

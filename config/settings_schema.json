@@ -1,5 +1,30 @@
 [
   {
+    "name": "Top Bar",
+    "settings": [
+      {
+        "type": "text",
+        "id": "marquee_text",
+        "label": "Marquee Text"
+      }
+    ]
+  },
+  {
+    "name": "Hero Banner",
+    "settings": [
+      {
+        "type": "text",
+        "id": "marquee_text",
+        "label": "Hero Marquee Text"
+      },
+      {
+        "type": "text",
+        "id": "button_text",
+        "label": "Hero button Text"
+      }
+    ]
+  },
+  {
     "name": "Featured Products",
     "settings": [
       {

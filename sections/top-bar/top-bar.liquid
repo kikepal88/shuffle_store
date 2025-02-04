@@ -3,7 +3,7 @@
   <div class="top_bar__gradient_right"></div>
   <div class="top_bar__marquee">
   {% for i in (1..30) %}
-    {% render 'marquee-item/marquee-item', settings: settings %}
+    {% render 'marquee-item/marquee-item', settings: settings['top-bar'] %}
   {% endfor %}
   </div>
 </section>

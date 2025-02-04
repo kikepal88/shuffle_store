@@ -3,7 +3,7 @@
     "top-bar": {
       "type": "top-bar",
       "settings": {
-        "heading": "FREE SHIPPING FOR ORDERS OVER $100",
+        "marquee_text": "FREE SHIPPING FOR ORDERS OVER $100",
         "background_color": "#762bfb",
         "image": "suffle_star.png"
       }
@@ -40,9 +40,9 @@
     "hero-banner": {
       "type": "hero-banner",
       "settings": {
-        "button_text": "Shop Now",
+        "button_text": "VIEW THE COLLECTION",
         "button_link": "/collections/all",
-        "marquee_text": "Free Shipping on Orders Over $50",
+        "marquee_text": "SHUFFLE ESSENTIALS",
         "background_image": "hero_banner_img.avif"
       }
     },
