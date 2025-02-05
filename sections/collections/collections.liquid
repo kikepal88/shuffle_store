@@ -1,0 +1,23 @@
+<section class="collections">
+  <div class="collections_title">
+    <div class="collections_title__image">
+      <img src="/assets/shuffle_star.png" alt="shuffle star">
+    </div>
+    <h2>{{ settings['collections'].settings.heading }}</h2>
+    <div class="collections_title__image">
+      <img src="/assets/shuffle_star.png" alt="shuffle star">
+    </div>
+  </div>
+  <div class="collections_images">
+    {% for collection in collections %}
+      {% if collection.created_at contains '2025' %}
+        <article class="collections_images__collection">
+          <div class="collections_images__collection_image">
+            <img src="{{ collection.image }}" alt="{{ collection.title }}">
+          </div>
+          <h2>{{ collection.title | upcase }}</h2>
+        </article>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>

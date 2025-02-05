@@ -20,8 +20,8 @@
       position: absolute;
       top: 0;
       z-index: 1;
-      width: 40px;
-      height: 50px;
+      width: 60px;
+      height: 80px;
     }
     &__gradient_left {
       left: 0;
@@ -37,15 +37,15 @@
       min-width: 100%;
       animation: marquee 60s linear infinite;
       article {
-        width: 345px;
+        width: 435px;
         .marquee_image {
-          width: 40px;
+          width: 60px;
           margin-inline-end: 15px;
         }
         p {
-          width: 290px;
-          font-size: $h1-size-p;
-          line-height: $h1-lh-size-p;
+          width: 360px;
+          font-size: calc($h1-size-p * 2);
+          line-height: calc($h1-lh-size-p * 2);
         }
       }
     }
@@ -73,8 +73,8 @@
     }
     button {
       position: absolute;
-      left: 55px;
-      bottom: 90px;
+      left: 50px;
+      bottom: 110px;
     }
     .hero_marquee {
       &__marquee {
@@ -96,25 +96,25 @@
 @media screen and (min-width: 1024px) {
   .hero {
     button {
-      left: 70px;
-      bottom: 100px;
+      left: 80px;
+      bottom: 140px;
     }
     .hero_marquee {
       padding: 8px 0;
       &__gradient_left, &__gradient_right {
-        width: 52px;
-        height: 66px;
+        width: 80px;
+        height: 99px;
       }
       &__marquee {
         article {
-          width: 410px;
+          width: 505px;
           .marquee_image {
-            width: 50px;
+            width: 70px;
           }
           p {
-            width: 345px;
-            font-size: $h1-size-g;
-            line-height: $h1-lh-size-g;
+            width: 420px;
+            font-size: calc($h1-size-g * 2);
+            line-height: calc($h1-lh-size-g * 2);
           }
         }
       }
@@ -132,7 +132,7 @@
     }
     button {
       left: 40px;
-      bottom: 110px;
+      bottom: 140px;
     }
     .hero_marquee {
       left: calc((1300px - 100vw) + ((100vw - 1300px)/2));

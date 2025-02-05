@@ -37,6 +37,12 @@
         "background_color": "#ffffff"
       }
     },
+    "collections": {
+      "type": "collections",
+      "settings": {
+        "heading": "LASTEST COLLECTIONS"
+      }
+    },
     "hero-banner": {
       "type": "hero-banner",
       "settings": {
