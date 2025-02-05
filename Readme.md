@@ -1,6 +1,6 @@
-# Shopify Simulator Documentation
+# Sluffle Store
 
-Welcome to **Shopify Simulator**, a lightweight environment designed to help developers explore Shopify's Liquid templating language and dynamic section-based architecture. This project simulates Shopify's core functionalities, enabling developers to practice creating reusable components, iterating through data, and working with dynamic settings.
+Welcome to **Sluffle Store**, the best online  clothing store. This is a landing page developed in a lightweight environment designed to help developers explore Shopify's Liquid templating language and dynamic section-based architecture.
 
 ---
 
@@ -18,13 +18,25 @@ Welcome to **Shopify Simulator**, a lightweight environment designed to help dev
 │   ├── styles.css                # Compiled CSS file
 │   ├── main.js                   # Compiled JavaScript file
 ├── /sections
-│   ├── featured-products.liquid  # Main section rendering product lists
+│   ├── collection                # Folder with a main section rendering collection section
+│   ├── featured-products         # Folder with a main section rendering product lists
+│   ├── footer                    # Folder with a main section rendering footer section
+│   ├── header                    # Folder with a main section rendering header section
+│   ├── hero                      # Folder with a main section rendering hero section
+│   ├── top-bar                   # Folder with a main section rendering top-bar section
 ├── /snippets
+│   ├── button                    # Folder with a reusable snippet to rendering a individual button
+│   ├── marquee-item              # Folder with a reusable snippet to rendering a individual marquee-item
+│   ├── pay-icons                 # Folder with a reusable snippet to rendering a individual pay-icons
 │   ├── product-card.liquid       # Reusable snippet for individual product cards
 ├── /templates
 │   ├── index.liquid              # Main template file
 ├── /src
-│   ├── styles.scss               # Base SASS file
+│   ├── styles                    # Folder with general SASS files
+│   ├──     ├──mixins.scss        # File with SASS mixins
+│   ├──     ├──reset.scss         # File with general styles
+│   ├──     ├──variables.scss     # File with SASS variables
+│   ├── styles.scss               # Base SASS file where imported all SASS files
 │   ├── app.js                    # Base JavaScript logic
 ├── /assets                       # Images for products, banners, and collections
 ├── package.json
@@ -34,79 +46,9 @@ Welcome to **Shopify Simulator**, a lightweight environment designed to help dev
 
 ---
 
-## **Liquid Basics**
-
-Liquid is a templating language used in Shopify to dynamically render content. Below are the key concepts you'll use in this simulator:
-
-### **Sections**
-
-Sections are modular components that render specific parts of a page. For example, the `featured-products.liquid` file is a section that displays a list of products. Sections can:
-
-- Access dynamic data from `settings_data.json`.
-- Be configured through a schema defined in `settings_schema.json`.
-
-Example:
-
-```liquid
-<section class="featured-products">
-  <h2>{{ settings['featured-products'].settings.heading }}</h2>
-</section>
-```
-
-### **Snippets**
-
-Snippets are reusable components, such as a product card. You can include a snippet using the `{% render %}` tag:
-
-Example:
-
-```liquid
-<div class="product-list">
-  {% for product in products %}
-    {% render 'product-card', product: product %}
-  {% endfor %}
-</div>
-```
-
-### **Iterating Over Objects**
-
-Liquid allows you to iterate over arrays, such as products or collections:
-
-```liquid
-<ul>
-  {% for product in products %}
-    <li>{{ product.title }} - ${{ product.price }}</li>
-  {% endfor %}
-</ul>
-```
-
-### **Filters**
-
-Filters are used to manipulate output. Some common filters:
-
-- `capitalize`: Capitalizes the first letter.
-- `date`: Formats a date.
-- `money`: Formats a number as currency.
-
-Example:
-
-```liquid
-{{ product.price | money }}
-{{ product.created_at | date: "%B %d, %Y" }}
-```
-
----
-
-## **Dynamic Configuration**
-
-### **Schema (`settings_schema.json`)**
-
-The schema defines the settings available for a section. While it's necessary in Shopify, it might not be required here.
-
-### **Data (`settings_data.json`)**
-
-This file contains the dynamic values for settings
-
 ## **Setup Instructions**
+
+This repository runs with the node version **V20.13.1**
 
 ### **Install Dependencies**
 
@@ -130,16 +72,37 @@ npm run build
 
 ## **Additional Notes**
 
-### **Assets**
-
-All product, banner, and collection images are stored in the `/assets` folder. Refer to the `data/products.json` and `data/collections.json` files for mappings.
-
 ### **Testing the Application**
 
 Visit `http://localhost:3000` in your browser to view the simulator in action.
 
 ---
+---
 
-Feel free to customize the simulator further to match your requirements. Happy coding! 🚀
+## Acerca de la Prueba
 
-For more information about Liquid, refer to the [official Liquid documentation](https://liquidjs.com/tutorials/intro-to-liquid.html).
+En relación con la prueba, hay algunos aspectos que me gustaría mencionar. Logré completar los objetivos principales, desarrollando las secciones top-bar, header, hero-banner, collections y footer. Sin embargo, me hubiera gustado también completar la sección de productos, probablemente la más compleja de construir.
+
+No pude finalizarla debido a varios obstáculos que encontré durante el desarrollo, los cuales explicaré más adelante. Estos me hicieron perder tiempo valioso, y al final, opté por priorizar las secciones hero-banner y collections, que requerían menos complejidad técnica.
+
+### Obstaculos
+
+Considero importante mencionar los obstáculos y errores que enfrenté, ya que de ellos se aprende y me ayudan a recordar que siempre hay margen de mejora.
+
+- Entorno de desarrollo: Mi mayor desafío fue configurar correctamente el entorno de trabajo. No tenía experiencia previa con Liquid, ni con su integración en un entorno basado en Node, Express y Webpack. Logré modificar los archivos de configuración (webpack.config.js y server.js) para que el proyecto funcionara, aunque no de la mejor manera. Al principio, la compilación del proyecto, especialmente los estilos, no se realizaba correctamente. Al final, conseguí que el entorno funcionara, pero para ver los cambios en el código, siempre tenía que ejecutar npm run build en una terminal aparte para reflejar las actualizaciones en el navegador.
+- Búsqueda y creación de imágenes: La recopilación y edición de imágenes consumió más tiempo del esperado, ya que varios recursos gráficos del diseño no estaban disponibles en el repositorio.
+- Relación entre settings_data.json y settings_schema.json: Al principio, no comprendía bien cómo interactuaban estos archivos. Pensé que no sería necesario modificar settings_schema.json, pero luego tuve problemas para renderizar varios datos desde settings_data.json. Tras investigar, entendí la relación entre ambos y la razón por la cual algunos datos no se mostraban correctamente.
+
+### Mejoras
+Durante el desarrollo, realicé algunas mejoras y añadí detalles adicionales para mejorar la experiencia visual y de usuario:
+
+- Recursos gráficos: Dado que algunas imágenes e íconos del diseño no estaban en los archivos del repositorio, creé algunas imágenes y busqué y descargué otras para completar la interfaz.
+- Animaciones y efectos adicionales: Implementé algunos detalles visuales que no estaban especificados en el diseño inicial, como:
+  - Navegación del header en versión mobile.
+  - Text shadow en las tarjetas de colecciones.
+  - Efectos hover en enlaces, botones y tarjetas de colección.
+
+### Comentarios
+- Hubo algunas instrucciones que me generaron confusión, especialmente en la información del diseño y los archivos JSON, ya que en algunos casos no coincidían. En ciertos momentos, modifiqué los JSON para alinearlos con el diseño, mientras que en otros decidí seguir la información original de los JSON. Opté por esta última opción en la sección de colecciones.
+
+Por último, quiero destacar que me esforcé bastante en la realización de esta prueba y la trabajé con dedicación. Si bien me apoyé en herramientas de IA para investigar algunos aspectos técnicos y solucionar obstáculos, también consulté documentación oficial y tutoriales para comprender mejor el proyecto.
