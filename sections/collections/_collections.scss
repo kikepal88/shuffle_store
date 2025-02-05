@@ -30,6 +30,8 @@
       width: 100%;
       aspect-ratio: 1 / 1.5;
       margin-block-end: 20px;
+      cursor: pointer;
+      overflow: hidden;
       &_image {
         position: absolute;
         top: 0;
@@ -42,6 +44,10 @@
         img {
           aspect-ratio: 1 / 1.5;
           border-radius: 10px;
+        }
+        img:hover {
+          scale: 1.05;
+          transition: 1s;
         }
       }
       h2 {

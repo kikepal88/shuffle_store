@@ -105,6 +105,9 @@
     border-radius: 5px;
     background-color: $Color-secundario;
   }
+  &_car:hover {
+    background-color: $Color-variante;
+  }
 }
 
 @keyframes AnimateBG {
