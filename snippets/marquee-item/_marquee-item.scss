@@ -1,0 +1,29 @@
+article {
+  @include flex-center-center-nowrap;
+  width: 233px;
+  .marquee_image {
+    width: 20px;
+    margin-inline-end: 10px;
+  }
+  p {
+    width: 203px;
+    font-family: $Fuente2;
+    font-size: $h4-size-p;
+    font-weight: 800;
+    line-height: $h4-lh-size-p;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  article {
+    width: 253px;
+    .marquee_image {
+      width: 22px;
+    }
+    p {
+      width: 223px;
+      font-size: $h4-size-g;
+      line-height: $h4-lh-size-g;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+button {
+  display: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: $Color-secundario;
+  a {
+    font-weight: 800;
+    font-family: $Fuente2;
+    color: $Color-claro;
+  }
+}
+button:hover {
+  background-color: $Color-variante;
+}
+
+@media screen and (min-width: 720px) {
+  button {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  button {
+    padding: 15px 20px;
+    a {
+      font-size: $h3-size-g;
+      line-height: $h3-lh-size-g;
+    }
+  }
+}

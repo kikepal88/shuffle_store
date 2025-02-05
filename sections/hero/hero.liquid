@@ -1,0 +1,17 @@
+<section class="hero">
+  <div class="hero_image">
+    <img src="/assets/hero_banner_img.avif" alt="hero image">
+  </div>
+  <div class="hero_button">
+    {% render 'button/button', settings: settings['hero-banner'] %}
+  </div>
+  <div class="hero_marquee">
+    <div class="hero_marquee__gradient_left"></div>
+    <div class="hero_marquee__gradient_right"></div>
+    <div class="hero_marquee__marquee">
+    {% for i in (1..40) %}
+      {% render 'marquee-item/marquee-item', settings: settings['hero-banner'] %}
+    {% endfor %}
+    </div>
+  </div>
+</section>

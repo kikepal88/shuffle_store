@@ -1,0 +1,116 @@
+.collections {
+  max-width: 1300px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 60px 0 0;
+  background-image: url("/assets/ellipse_bg.svg");
+  background-repeat: no-repeat;
+  background-position: center -70px;
+  background-size: 180%;
+  &_title {
+    @include flex-center-start-nowrap;
+    width: 95%;
+    margin: 0 auto 20px;
+    &__image {
+      width: 65px;
+    }
+    h2 {
+      width: min-content;
+      font-size: calc($h1-size-p * 2);
+      font-weight: 800;
+      line-height: calc($h1-lh-size-p * 1.5);
+      text-align: center;
+    }
+  }
+  &_images {
+    width: 90%;
+    margin: 0 auto;
+    &__collection {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1.5;
+      margin-block-end: 20px;
+      &_image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        width: 100%;
+        border-radius: 10px;
+        img {
+          aspect-ratio: 1 / 1.5;
+          border-radius: 10px;
+        }
+      }
+      h2 {
+        position: absolute;
+        left: 20px;
+        bottom: 30px;
+        z-index: 3;
+        font-weight: 600;
+        text-shadow: 0 2px 10px $Color-primario;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .collections {
+    &_title {
+      @include flex-center-center-nowrap;
+      h2 {
+        width: initial;
+        margin-inline: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .collections {
+    background-position: center -50px;
+    background-size: 100%;
+    &_images {
+      &__collection {
+        aspect-ratio: 2.25 / 1;
+        margin-block-end: 20px;
+        &_image {
+          img {
+            aspect-ratio: 2.25 / 1;
+          }
+        }
+        h2 {
+          text-shadow: 1px 1px 15px $Color-primario;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .collections {
+    background-position: center -10px;
+    background-size: 40%;
+    &_images {
+      @include flex-space-center-wrap;
+      width: 98%;
+      &__collection {
+        width: 49%;
+        h2 {
+          bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .collections {
+    &_images {
+      @include flex-space-center-wrap;
+      width: 100%;
+    }
+  }
+}

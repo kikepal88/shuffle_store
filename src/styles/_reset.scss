@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: $Color-claro;
+  text-decoration: none;
+}
+
+html {
+  font-size: 50%;
+}
+
+body {
+  width: 100%;
+  font-family: $Fuente1;
+  color: $Color-claro;
+  background-color: $Color-primario;
+}
+
+h1, h2, h3, h4 {
+  font-family: $Fuente2;
+}
+
+h1 {
+  font-size: $h1-size-p;
+  line-height: $h1-lh-size-p;
+}
+h2 {
+  font-size: $h2-size-p;
+  line-height: $h2-lh-size-p;
+}
+h3 {
+  font-size: $h3-size-p;
+  line-height: $h3-lh-size-p;
+}
+h4 {
+  font-size: $h4-size-p;
+  line-height: $h4-lh-size-p;
+}
+p {
+  font-size: $p-size-p;
+  line-height: $p-lh-size-p;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+body::-webkit-scrollbar {
+  width: 6px;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: $Color-secundario;
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: $h1-size-g;
+    line-height: $h1-lh-size-g;
+  }
+  h2 {
+    font-size: $h2-size-g;
+    line-height: $h2-lh-size-g;
+  }
+  h3 {
+    font-size: $h3-size-g;
+    line-height: $h3-lh-size-g;
+  }
+  h4 {
+    font-size: $h4-size-g;
+    line-height: $h4-lh-size-g;
+  }
+  p {
+    font-size: $p-size-g;
+    line-height: $p-lh-size-g;
+  }
+}

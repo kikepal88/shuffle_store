@@ -1,5 +1,35 @@
 {
   "sections": {
+    "top-bar": {
+      "type": "top-bar",
+      "settings": {
+        "marquee_text": "FREE SHIPPING FOR ORDERS OVER $100",
+        "background_color": "#762bfb",
+        "image": "suffle_star.png"
+      }
+    },
+    "header": {
+      "type": "header",
+      "settings": {
+        "heading": "SUFFLE",
+        "title": "STORE",
+        "image": "suffle_logo.png",
+        "links": [
+          { "label": "All Products", "url": "#allproducts" },
+          { "label": "Collections", "url": "#collections" }
+        ],
+        "pay_methods": {
+          "title": "We Accept",
+          "links": [
+            { "label": "bitcoin", "url": "/assets/bitcoin.svg" },
+            { "label": "ethereum", "url": "/assets/ethereum.png" },
+            { "label": "litecoin", "url": "/assets/litecoin.svg" },
+            { "label": "dogecoin", "url": "/assets/dogecoin.svg" },
+            { "label": "usdcoin", "url": "/assets/usdcoin.png" }
+          ]
+        }
+      }
+    },
     "featured-products": {
       "type": "featured-products",
       "settings": {
@@ -7,27 +37,43 @@
         "background_color": "#ffffff"
       }
     },
+    "collections": {
+      "type": "collections",
+      "settings": {
+        "heading": "LASTEST COLLECTIONS"
+      }
+    },
     "hero-banner": {
       "type": "hero-banner",
       "settings": {
-        "button_text": "Shop Now",
+        "button_text": "VIEW THE COLLECTION",
         "button_link": "/collections/all",
-        "marquee_text": "Free Shipping on Orders Over $50",
+        "marquee_text": "SHUFFLE ESSENTIALS",
         "background_image": "hero_banner_img.avif"
       }
     },
     "footer": {
       "type": "footer",
       "settings": {
-        "logo_text": "MyShopify",
+        "heading": "STORE",
+        "copy": "© 2024, Shuffle.store Operated by Studio Plaid. Need help? Email support support@shuffle.store",
+        "pay_methods_text": "We accept all major cards, PayPal & crypto",
+        "subscribe_text": "Subscribe and receive drop notifications",
         "links": [
           { "label": "Home", "url": "/" },
           { "label": "Cart", "url": "/cart" },
           { "label": "All Products", "url": "/collections/all" },
-          { "label": "Collections", "url": "/collections" },
+          { "label": "Collections", "url": "/collections" }
+        ],
+        "second_links": [
           { "label": "Refund Policy", "url": "/refund-policy" },
           { "label": "Privacy Policy", "url": "/privacy-policy" },
           { "label": "Terms of Service", "url": "/terms-of-service" }
+        ],
+        "social_links": [
+          { "label": "FACEBOOK", "url": "/facebook" },
+          { "label": "X(TWITTER)", "url": "/twitter" },
+          { "label": "INSTAGRAM", "url": "/instagram" }
         ]
       }
     }

@@ -1,0 +1,9 @@
+
+.paymethods_methods {
+  @include flex-space-center-nowrap;
+  width: 190px;
+  &_icon {
+    width: 30px;
+    height: 30px;
+  }
+}
