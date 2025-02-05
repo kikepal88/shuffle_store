@@ -63,6 +63,16 @@
         "label": "Subscribe Text"
       },
       {
+        "type": "collection",
+        "id": "subscribe_icon",
+        "label": "subscribe icon"
+      },
+      {
+        "type": "collection",
+        "id": "logo",
+        "label": "logo"
+      },
+      {
         "type": "url_list",
         "id": "links",
         "label": "Footer Links"

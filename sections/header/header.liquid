@@ -7,7 +7,7 @@
     ></i>
     <div class="header_logo__suffle">
       <div class="header_logo__suffle_image">
-        <img src="/assets/shuffle_logo.png" alt="shuffle logo">
+        <img src="{{ settings['header'].settings.image }}" alt="shuffle logo">
       </div>
       <h1>
         <strong>{{ settings['header'].settings.heading }}</strong>
@@ -32,7 +32,7 @@
     </nav>
   </div>
   <div class="header_car">
-    <img src="/assets/shopping_car.svg" alt="shopping car">
+    <img src="{{ settings['header'].settings.car_icon }}" alt="shopping car">
   </div>
 </header>
 

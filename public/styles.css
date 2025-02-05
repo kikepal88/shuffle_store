@@ -292,6 +292,9 @@ body::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background-color: #762bfb;
 }
+.header_car:hover {
+  background-color: #9c7ff6;
+}
 
 @keyframes AnimateBG {
   0% {
@@ -529,7 +532,7 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   margin: 0 auto;
   padding: 60px 0 0;
-  background-image: url(04cf97696bacc20bee96.svg);
+  background-image: url(cab9e101b0f2eff975bf.svg);
   background-repeat: no-repeat;
   background-position: center -70px;
   background-size: 180%;
@@ -561,6 +564,8 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   aspect-ratio: 1/1.5;
   margin-block-end: 20px;
+  cursor: pointer;
+  overflow: hidden;
 }
 .collections_images__collection_image {
   position: absolute;
@@ -575,6 +580,10 @@ body::-webkit-scrollbar-thumb {
 .collections_images__collection_image img {
   aspect-ratio: 1/1.5;
   border-radius: 10px;
+}
+.collections_images__collection_image img:hover {
+  scale: 1.05;
+  transition: 1s;
 }
 .collections_images__collection h2 {
   position: absolute;
@@ -693,7 +702,7 @@ body::-webkit-scrollbar-thumb {
 }
 .footer_nav ul li:hover {
   border-bottom: 3px solid;
-  border-image: linear-gradient(#762bfb, #9c7ff6) 1;
+  border-image: linear-gradient(90deg, #762bfb, #9c7ff6) 1;
 }
 .footer_subnav {
   display: block;
@@ -754,6 +763,9 @@ body::-webkit-scrollbar-thumb {
   display: block;
   order: 6;
   width: 80px;
+}
+.footer_social a:hover {
+  color: #762bfb;
 }
 
 @media screen and (min-width: 720px) {

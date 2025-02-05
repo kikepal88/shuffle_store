@@ -2,7 +2,7 @@
   <div class="footer_logo">
     <div class="footer_logo__suffle">
       <div class="footer_logo__suffle_image">
-        <img src="/assets/shuffle_logo.png" alt="shuffle logo">
+        <img src="{{ settings['footer'].settings.logo.logo_image }}" alt="{{ settings['footer'].settings.logo.logo_name }}">
       </div>
       <h1>
         <span>|</span>
@@ -45,7 +45,7 @@
     <p>{{ settings['footer'].settings.subscribe_text }}</p>
     <input type="text" placeholder="Enter Email">
     <div class="footer_subscribe__icon">
-      <img src="/assets/arrow_forward.svg" alt="arrow forward">
+      <img src="{{ settings['footer'].settings.subscribe_icon.icon }}" alt="{{ settings['footer'].settings.subscribe_icon.icon_name }}">
     </div>
   </div>
   <div class="footer_social">

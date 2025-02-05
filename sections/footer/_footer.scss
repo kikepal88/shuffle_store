@@ -43,7 +43,7 @@
       }
       li:hover {
         border-bottom: 3px solid;
-        border-image: linear-gradient($Color-secundario, $Color-variante) 1;
+        border-image: linear-gradient(90deg, $Color-secundario, $Color-variante) 1;
       }
     }
   }
@@ -105,6 +105,9 @@
     display: block;
     order: 6;
     width: 80px;
+    a:hover {
+      color: $Color-secundario;
+    }
   }
 }
 

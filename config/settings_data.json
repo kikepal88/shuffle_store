@@ -5,7 +5,8 @@
       "settings": {
         "marquee_text": "FREE SHIPPING FOR ORDERS OVER $100",
         "background_color": "#762bfb",
-        "image": "suffle_star.png"
+        "image": "/assets/shuffle_star.png",
+        "image_name": "shuffle star"
       }
     },
     "header": {
@@ -13,7 +14,8 @@
       "settings": {
         "heading": "SUFFLE",
         "title": "STORE",
-        "image": "suffle_logo.png",
+        "image": "/assets/shuffle_logo.png",
+        "car_icon": "/assets/shopping_car.svg",
         "links": [
           { "label": "All Products", "url": "#allproducts" },
           { "label": "Collections", "url": "#collections" }
@@ -40,7 +42,9 @@
     "collections": {
       "type": "collections",
       "settings": {
-        "heading": "LASTEST COLLECTIONS"
+        "heading": "LASTEST COLLECTIONS",
+        "image": "/assets/shuffle_star.png",
+        "image_name": "shuffle star"
       }
     },
     "hero-banner": {
@@ -49,7 +53,9 @@
         "button_text": "VIEW THE COLLECTION",
         "button_link": "/collections/all",
         "marquee_text": "SHUFFLE ESSENTIALS",
-        "background_image": "hero_banner_img.avif"
+        "image": "/assets/shuffle_star.png",
+        "image_name": "shuffle star",
+        "background_image": "/assets/hero_banner_img.avif"
       }
     },
     "footer": {
@@ -59,6 +65,14 @@
         "copy": "© 2024, Shuffle.store Operated by Studio Plaid. Need help? Email support support@shuffle.store",
         "pay_methods_text": "We accept all major cards, PayPal & crypto",
         "subscribe_text": "Subscribe and receive drop notifications",
+        "subscribe_icon": {
+          "icon": "/assets/arrow_forward.svg",
+          "icon_name": "subscribe icon"
+        },
+        "logo": {
+          "logo_image": "/assets/shuffle_logo.png",
+          "logo_name": "shuffle logo"
+        },
         "links": [
           { "label": "Home", "url": "/" },
           { "label": "Cart", "url": "/cart" },
